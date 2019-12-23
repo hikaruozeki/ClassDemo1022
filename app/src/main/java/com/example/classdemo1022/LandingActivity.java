@@ -8,15 +8,31 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class LandingActivity extends AppCompatActivity {
+public class LandingActivity extends AppCompatActivity implements View.OnClickListener{
+
+    TextView textViewBirdNameBiggest;
+    TextView textViewBissgestImportance;
+    Button buttonPush;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing);
+        textViewBirdNameBiggest = findViewById(R.id.textViewBirdNameBiggest);
+        textViewBissgestImportance = findViewById(R.id.textViewBiggestImportance);
+        buttonPush = findViewById(R.id.buttonPush);
+        buttonPush.setOnClickListener(this);
+
     }
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -53,5 +69,10 @@ public class LandingActivity extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }

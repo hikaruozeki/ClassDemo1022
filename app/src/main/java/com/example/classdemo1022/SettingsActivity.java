@@ -86,6 +86,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         if (buttonSearch == view) {
             String findbird = editTextInputZipCode.getText().toString();
+            if (findbird.matches("")) {
+                Toast.makeText(this,"Zip Code is Empty", Toast.LENGTH_SHORT).show();
+            }
             myRef.orderByChild("zipcode").equalTo(findbird).addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {

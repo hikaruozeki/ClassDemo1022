@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    tools:context=".SettingsActivity">
 
     <EditText
         android:id="@+id/editTextInputZipCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:hint="Enter Zip Code"
         android:layout_marginTop="100dp"
         android:ems="10"
         android:inputType="number"
-        android:text="Zip Code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
